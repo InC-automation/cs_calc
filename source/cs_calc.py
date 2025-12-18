@@ -1,6 +1,5 @@
 import grpc
 import elecont_pb2, elecont_pb2_grpc
-import time
 from аrithmetics import аrithmetic
 
 calculation = аrithmetic()
