@@ -7,14 +7,14 @@ import configparser
 class аrithmetic:  
 
     grcp_connect_status = False
-    grpc_channel = grpc.insecure_channel('localhost:29041')
+    grpc_channel = None
+    stub = None
     cycle_period = 10
     trace = True
     x_dict = {}
     x_values = {}
     y_dict = {}
     y_signals = {}
-    stub = elecont_pb2_grpc.ElecontStub(grpc_channel)
 
     def __init__(self): # Прочитать настройки из файла setting.ini
         config = configparser.ConfigParser()
